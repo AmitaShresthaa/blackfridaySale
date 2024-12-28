@@ -1,0 +1,210 @@
+body{
+    margin:0px;
+}
+:root
+ {
+    --box-shadow:rgba(250, 235, 215, 0.701);
+    --shadow:rgb(40, 12, 0);
+    --font_color:gold;
+}
+.header-section{
+    display: flex;
+}
+
+.grid-container{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr;
+    gap: 12px;
+    grid-template-areas: 
+        "logo nav cart"
+        "hero hero hero"
+        "sale sale sale"
+        "sale sale sale"
+        "footer footer footer";
+
+}
+.logo-name{
+    grid-area: logo;
+    font-weight:bolder;
+    font-size:60px;
+    letter-spacing: 5px;
+
+}
+.flex-container{
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+/* Navbar */
+.navbar-container{
+    justify-content: space-between;
+    padding:2vh 2vh 2vh;
+    gap: 25vw;
+    background-color: var(--bg_color);
+    box-shadow: var(--box-shadow);
+    font-size: 25px;
+    position:fixed;
+
+}
+.nav-items{
+    list-style-type: none;
+  
+}
+
+.nav-items a{
+    text-decoration: none;
+    color:var(--text-color);
+    
+}
+.cart{
+    grid-area: cart;
+    flex-basis:20px;
+    margin: 30px;
+}
+.nav-item :hover{
+    color: beige;
+    cursor: pointer;
+}
+
+.hero{
+    grid-area: hero;
+    margin-top: 5vh;
+    background: url(./assets/hero1.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    
+}
+
+.hero-text{
+    margin-top: 20vh ;
+    text-align: center;
+    background-color: rgba(250, 235, 215, 0.701);
+    padding: 5vh;
+    background-attachment: inherit;
+    
+}
+
+.sale-section{
+    background-color: azure;
+    grid-area: sale;
+    position: relative;
+    height: 50vh;
+
+}
+.sale-section-text{
+    font-weight:bolder;
+    font-size:30px;
+    letter-spacing: 5px;
+    text-align: center;
+    /* margin-left: 100px; */
+}
+.sale-price{
+ text-decoration:line-through;
+ color: brown;
+ font-size: large;
+}
+
+.item-card{
+    display:flex;
+    flex-wrap: wrap;
+    padding:10px;
+    gap: 10px;  
+    height: 180vh;
+
+  
+    /* box-shadow: plum; */
+}
+.item-image{
+    height: 60vh;
+    width: 25vw;
+}
+
+.item-flex1{
+    flex-basis: 20%;
+    box-shadow:var(--shadow);
+    gap:2px;
+    margin:20px;
+    position: relative;
+
+}
+
+.item-flex2{   
+    flex-basis: 20%;
+    box-shadow:var(--shadow);
+    gap:2px;
+    margin:20px;
+    position: relative;
+
+}
+
+
+.item-flex3{
+    flex-basis: 20%;
+    box-shadow:var(--shadow);
+    gap:2px;
+    margin:20px;
+    position: relative;
+
+
+}
+
+.item-flex4{
+    flex-basis: 20%;
+    box-shadow:var(--shadow);
+    gap:2px;
+    margin:20px;
+    position: relative;
+
+}
+
+.item-flex5{
+    flex-basis: 20%;
+    box-shadow:var(--shadow);
+    gap:2px;
+    margin:20px;
+    position: relative;
+
+
+}
+
+.item-flex6{
+    flex-basis: 20%;
+    box-shadow:var(--shadow);
+    gap:2px;
+    margin:20px;
+    position: relative;
+
+
+}
+
+.cartButton{
+    border-radius: 10px;
+    border: 0 ;
+    padding: 20px;
+    width: 25vw;
+    background-color:var(--box-shadow);
+    font-size: large;
+
+}
+
+.cartButton:hover{
+    background-color:darkslateblue;
+    color: beige;
+    cursor: pointer;
+
+}
+
+.footer{
+    grid-area:footer;
+    padding:5vw;
+    margin: 0;
+    background-color: rgb(207, 181, 181);
+    color:aliceblue;
+    text-align: center;
+    margin-top: 150%;
+}
